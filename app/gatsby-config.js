@@ -1,3 +1,4 @@
+const path = require(`path`)
 module.exports = {
   pathPrefix: '/AntiCancerRecipe',
   siteMetadata: {
@@ -6,11 +7,18 @@ module.exports = {
     description:
       'Recipe Generator suggests delicious anti-cancer recipe based on your familiar taste',
     url: 'https://maekawataiki.github.io/AntiCancerRecipe',
-    image: '/images/bg',
+    image: '/twitter.jpg',
     twitterUsername: 'maekawataiki000',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -153,6 +153,23 @@ class IndexPage extends React.Component {
                   deliciousness to food, including glutamate, inosinates, and
                   guanylates.
                 </p>
+                <ol>
+                  <li>
+                    Veselkov, K., Gonzalez, G., Aljifri, S. et al. HyperFoods:
+                    Machine intelligent mapping of cancer-beating molecules in
+                    foods. Sci Rep 9, 9237 (2019).
+                    https://doi.org/10.1038/s41598-019-45349-y
+                  </li>
+                  <li>
+                    Ahn, Y., Ahnert, S., Bagrow, J. et al. Flavor network and
+                    the principles of food pairing. Sci Rep 1, 196 (2011).
+                    https://doi.org/10.1038/srep00196
+                  </li>
+                  <li>
+                    Umami InformationCenter. (n.d.). Retrieved October 10, 2020,
+                    from https://www.umamiinfo.com/
+                  </li>
+                </ol>
                 {close}
               </article>
             </div>

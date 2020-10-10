@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import twitterImage from '../images/twitter.jpg'
 
 const SEO = ({ title, description, image, pathname, article }) => (
   <StaticQuery
@@ -20,7 +19,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        image: twitterImage,//`${siteUrl}${image || defaultImage}`,
+        image: `${siteUrl}${image || defaultImage}`,
         url: `${siteUrl}${pathname || '/'}`,
       }
 
