@@ -7,7 +7,7 @@
 /* Main */
 
 	#main {
-		@include vendor('flex-grow', '1');
+		// @include vendor('flex-grow', '1');
 		@include vendor('flex-shrink', '1');
 		@include vendor('display', 'flex');
 		@include vendor('align-items', 'center');
