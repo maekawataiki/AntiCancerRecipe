@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/AntiCancerRecipe`,
   siteMetadata: {
     title: 'Delicious Anti Cancer Recipe Engine',
     author: 'Taiki Maekawa',
@@ -6,7 +7,7 @@ module.exports = {
       'Recipe Generator suggests delicious anti-cancer recipe based on your familiar taste',
     url: 'https://maekawataiki.github.io/AntiCancerRecipe',
     image: '/images/bg',
-    twitterUsername: 'maekawataiki000'
+    twitterUsername: 'maekawataiki000',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
