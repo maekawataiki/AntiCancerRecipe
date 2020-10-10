@@ -153,6 +153,9 @@ class IndexPage extends React.Component {
                   deliciousness to food, including glutamate, inosinates, and
                   guanylates.
                 </p>
+                <p>
+                  * DISCLAIMER: This is not medical advice
+                </p>
                 <ol>
                   <li>
                     Veselkov, K., Gonzalez, G., Aljifri, S. et al. HyperFoods:
