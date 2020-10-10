@@ -12,7 +12,7 @@ class IndexPage extends React.Component {
       timeout: false,
       articleTimeout: false,
       article: '',
-      loading: props.location.state ? '' : 'is-loading' // state exist if navigated from Gatsby Page
+      loading: props.location.state ? 'placeholder' : 'is-loading' // state exist if navigated from Gatsby Page
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
@@ -21,11 +21,9 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount () {
-    console.log("componentDidMount")
     this.timeoutId = setTimeout(() => {
         this.setState({loading: ''});
-        console.log("set state loading=''")
-    }, 1000);
+    }, 100);
     document.addEventListener('mousedown', this.handleClickOutside);
   }
 

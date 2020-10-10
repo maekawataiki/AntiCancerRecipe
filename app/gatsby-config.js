@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/AntiCancerRecipe`,
+  pathPrefix: '/AntiCancerRecipe',
   siteMetadata: {
     title: 'Delicious Anti Cancer Recipe Engine',
     author: 'Taiki Maekawa',
