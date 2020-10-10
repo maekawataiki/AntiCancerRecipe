@@ -1,0 +1,177 @@
+#app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  #recipe {
+    width: 100%;
+    margin: 10px auto;
+
+    textarea {
+      background-image: linear-gradient(#333333 50%, #666666 50%);
+      background-size: 100% 4rem;
+      background-attachment: local;
+      outline: none;
+      box-shadow: none;
+      border: 1px solid #ccc;
+      width: 100%;
+      height: 200px;
+      line-height: 2rem;
+      padding: 0px 8px;
+      overflow: scroll;
+      resize: vertical;
+    }
+  }
+
+  #engine {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #suggest {
+    flex: 1 1 auto;
+    height: 200px;
+    min-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 10px 10px 0;
+
+    table {
+      height: 100%;
+      thead {
+        display: block;
+        height: 2rem;
+        border-bottom: solid 1px #ffffff;
+      }
+      tbody {
+        display: block;
+        height: calc(200px - 2rem);
+        overflow-y: scroll;
+        tr {
+          border: none;
+          background-color: #666666;
+          &:nth-child(2n + 1) {
+            background-color: #333333;
+          }
+        }
+      }
+      tr {
+        display: block;
+        display: block;
+        width: 100%;
+        height: 2rem;
+      }
+      th,
+      td {
+        display: inline-block;
+        width: 50px;
+        padding: 0 8px;
+        line-height: 2rem;
+        &:first-child {
+          width: calc(100% - 150px);
+        }
+      }
+      th:nth-child(n + 2) {
+        padding: 0;
+
+        button {
+          border: none;
+          box-shadow: none;
+          line-height: 2rem;
+          height: 2rem;
+          width: 100%;
+          padding: 0 8px;
+          text-align: left;
+          letter-spacing: 0;
+          position: relative;
+
+          &:before,
+          &:after {
+            position: absolute;
+            bottom: 2px;
+            right: 8px;
+            display: block;
+            opacity: 0.3;
+            font-family: 'FontAwesome';
+            font-weight: 900;
+            font-size: 1rem;
+          }
+          &:before {
+            content: '\f0de';
+          }
+          &:after {
+            content: '\f0dd';
+          }
+          &.asc:before {
+            opacity: 1;
+          }
+          &.desc:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  #chart {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+
+    .shape {
+      fill-opacity: 0.3;
+      &:hover {
+        fill-opacity: 0.65;
+        z-index: 100;
+      }
+    }
+
+    .scale {
+      fill: #ffffff33;
+      stroke: #ccc;
+      stroke-width: 1;
+    }
+
+    .axis {
+      stroke: #ccc;
+      stroke-width: 1;
+    }
+
+    .dot {
+      fill: white;
+      stroke: #e7e8e7;
+      r: 5;
+      transition: r 0.2s;
+
+      &:hover {
+        stroke: #bbb;
+        r: 8;
+      }
+    }
+
+    .caption {
+      fill: #fff;
+      font-weight: 400;
+    }
+  }
+
+  @include breakpoint(small) {
+    #suggest {
+      width: 100%;
+      margin: 10px auto;
+    }
+
+    #chart {
+      width: 100%;
+      margin: 10px auto;
+    }
+  }
+}
